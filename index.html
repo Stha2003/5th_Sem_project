@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Integrity</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Image Integrity</h1>
+    </div>
+    <div class="container">
+      <div class="sidebar">
+        <div class="profile">
+          <img src="profile-pic.jpg" />
+
+          <p>Username</p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#" id="upload-link">New Scan</a></li>
+            <li><a href="#" id="results-link">Results</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main">
+        <div class="upload-page active">
+          <h1>New Scan</h1>
+          <div class="upload-content">
+            <div class="upload-box">
+              <div class="upload-icon">📤</div>
+              <p>CHOOSE SCAN</p>
+              <input type="file" id="file-input" style="display: none" />
+            </div>
+            <div class="button-group">
+              <button
+                class="upload-button"
+                onclick="document.getElementById('file-input').click();"
+              >
+                Upload
+              </button>
+              <button class="analyze-button">Analyze</button>
+            </div>
+          </div>
+        </div>
+        <div class="results-page">
+          <h1>Results</h1>
+          <div class="results-content">
+            <div class="results-main"></div>
+            <div class="results-sidebar">
+              <div class="results-info"></div>
+              <div class="results-info"></div>
+              <button class="save-button">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("upload-link")
+        .addEventListener("click", function () {
+          document.querySelector(".results-page").classList.remove("active");
+          document.querySelector(".upload-page").classList.add("active");
+        });
+
+      document
+        .getElementById("results-link")
+        .addEventListener("click", function () {
+          document.querySelector(".results-page").classList.add("active");
+          document.querySelector(".upload-page").classList.remove("active");
+        });
+
+      document
+        .getElementById("file-input")
+        .addEventListener("change", function (event) {
+          const file = event.target.files[0];
+          if (file) {
+            alert("File selected: " + file.name);
+          }
+        });
+    </script>
+  </body>
+</html>

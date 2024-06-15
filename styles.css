@@ -1,0 +1,176 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f4f7;
+}
+
+.header {
+  width: 80%;
+  background-color: #333;
+  color: white;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  height: 80vh;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #eef2f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+}
+
+.main {
+  width: 80%;
+  padding: 20px;
+}
+
+.results-page,
+.upload-page {
+  display: none;
+}
+
+.results-page.active,
+.upload-page.active {
+  display: block;
+}
+
+.results-page h1,
+.upload-page h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.results-content {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.upload-content {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+.results-main {
+  width: 70%;
+  height: 60vh;
+  background-color: #d3d8dc;
+  border-radius: 10px;
+}
+
+.results-sidebar {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.results-info {
+  height: 20vh;
+  background-color: #d3d8dc;
+  border-radius: 10px;
+}
+
+.save-button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.upload-box {
+  width: 60%;
+  height: 50vh;
+  background-color: #d3d8dc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.upload-box p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.upload-button,
+.analyze-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.upload-button {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.analyze-button {
+  background-color: black;
+  color: white;
+}
